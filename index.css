@@ -188,7 +188,6 @@ a.anchor:hover {
 }
 
 .row > img.project {
-  /* height: 60vh; */
   width: 40vw;
 }
 
@@ -283,6 +282,32 @@ section {
   }
   section {
     padding: 10px;
+  }
+  #portfolio {
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    height: 100%;
+    -webkit-perspective: 0;
+    perspective: 0;
+  }
+  #slideContainer {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+  }
+  
+  .page1,
+  .page2 {
+    height: 100%;
+    width: 100%;
+    position: relative;
+  }
+  
+  .page2 {
+    left: 0%;
   }
 
 }
