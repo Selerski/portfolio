@@ -1,0 +1,8 @@
+{
+    "editor.formatOnSave": true,
+    "prettier.singleQuote": true,
+    "prettier.bracketSpacing": false,
+    "prettier.useEditorConfig": false,
+    "prettier.proseWrap": "always",
+    "eslint.codeActionsOnSave.mode": "problems"
+}
