@@ -1,6 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=UA-162712982-1"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag('js', new Date());
+
+      gtag('config', 'UA-162712982-1');
+    </script>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
@@ -90,7 +104,7 @@
           </a>
         </div>
       </div>
-      <a class="anchor" href="#about">
+      <a id="about-button" class="anchor" href="#about">
         <div>
           About me
         </div>
@@ -99,9 +113,7 @@
         </span>
       </a>
     </div>
-    <a class="anchor contact-button" id="contact-button" href="#contact">
-      &#8681; I'm available for work, get in touch
-    </a>
+    <div id="trigger1" class=""></div>
     <div id="about" class="about-container">
       <div class="about">
         <div class="about-header">
@@ -117,27 +129,74 @@
             alt="pawel-p"
           />
           <p class="about-description">
+            
             As an engineer by profession and an artist by heart, I aim to
             combine these two skillsets in order to make websites that looks
-            amazing and function reliably in all conditions. <br />
+            amazing and function reliably in all conditions. <br /><br/>
             My role model is Enzo Ferrari, the man behind the famous car brand,
             who back in his time built the world's most beautiful, innovative
             and fast cars.
           </p>
+          <a id="portfolio-button" class="anchor" href="#portfolio">
+            <div>
+              My portfolio
+            </div>
+            <span class="material-icons">
+              keyboard_arrow_down
+            </span>
+          </a>
         </div>
       </div>
-      <a class="anchor" href="#portfolio">
-        <div>
-          My portfolio
-        </div>
-        <span class="material-icons">
-          keyboard_arrow_down
-        </span>
-      </a>
     </div>
+    <div id="trigger2" class=""></div>
     <div id="portfolio">
       <div id="slideContainer" class="projects-container">
         <section class="page1">
+          <div class="row">
+            <img class="project" src="./graphics/Coronavirus.png" />
+            <div class="description">
+              <div class="title-container">
+                <h1>
+                  <span class="title-underline-1">COVID-19</span> Twitter Feed
+                </h1>
+              </div>
+              <p>
+                The feed was built to get the idea of just how many Tweets about
+                Coronavirus are being posted at any given time. <br/>
+                The app draws on my previous knowledge of WebSockets and taps
+                into the Twitter API to obtain the stream of tweets. The front
+                end was build with Vanilla HTML/CSS and JavaScript.
+              </p>
+              <p style="text-align: right;">
+                Click
+                <a href="https://agile-castle-96552.herokuapp.com/">here</a>
+                to visit the Feed!
+              </p>
+              <div class="ts-icons">
+                <img
+                  src="./graphics/twitter_icon.png"
+                  class="ts-icon"
+                  alt="twitter"
+                />
+                <img src="./graphics/JS.png" class="ts-icon" alt="javascript" />
+                <img src="./graphics/html5.png" class="ts-icon" alt="HTML5" />
+                <img src="./graphics/css3.png" class="ts-icon" alt="CSS3" />
+                <img src="./graphics/Node.png" class="ts-icon" alt="Node" />
+                <img
+                  src="./graphics/Expressjs.png"
+                  class="ts-icon"
+                  alt="express"
+                />
+                <img
+                  src="./graphics/Socket-io.svg"
+                  class="ts-icon"
+                  alt="socket.io"
+                />
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="page2">
           <div class="row">
             <img class="project" src="./graphics/Vapour.png" />
             <div class="description">
@@ -147,17 +206,12 @@
                   src="./graphics/vapour-logo.svg"
                   alt="vapour logo"
                 />
-                <h1><span class="title-underline-1">Vapo</span>ur</h1>
+                <h1><span class="title-underline-2">Vapo</span>ur</h1>
               </div>
               <p>
                 Vapour is a social gaming platform where users can play single
                 and multiplayer games, as well as communicate via chat.
-              </p>
-              <p>
-                The platform was developed in a team of 5, for the 2-week long
-                Codeworks Bootcamp Thesis Project.
-              </p>
-              <p>
+                <br/>
                 Vapour was created using the MERN stack, with Redux used for
                 client-side state management. It utilises WebSockets to enable
                 1-to-1 chat and a discussion forum for logged in users. Vapour
@@ -165,7 +219,7 @@
                 The collection of games includes Snake, Pong, Asteroids, Agar.io
                 and more!
               </p>
-              <p>
+              <p style="text-align: right;">
                 Click
                 <a href="https://whispering-ocean-93586.herokuapp.com/">here</a>
                 to visit Vapour!
@@ -197,7 +251,7 @@
             </div>
           </div>
         </section>
-        <section class="page2">
+        <section class="page3">
           <div class="row">
             <img class="project" src="./graphics/TownCrunchr.png" />
             <div class="description">
@@ -207,29 +261,24 @@
                   src="./graphics/towncrunchr-logo.jpg"
                   alt="TownCrunchr logo"
                 />
-                <h1><span class="title-underline-2">TownCr</span>unchr</h1>
+                <h1><span class="title-underline-3">TownCr</span>unchr</h1>
               </div>
               <p>
                 TownCrunchr is a web-based application simplifying house
-                searching for Londoners!
-              </p>
-              <p>
-                The app uses public data available in the London Datastore (<a
-                  href="https://data.london.gov.uk"
-                  >source</a
-                >) to quantify which borough in London is best for you to live
-                in.
-              </p>
-              <p>
-                TownCrunchr utilises a dedicated statistical model using
-                Gaussian Distribution to calculate top 3 locations based on
+                searching for Londoners! <br/>
+                TownCrunchr calculates top 3 locations in London based on
                 salary, target rent, and desired public transportation
-                accessibility. The platform was designed and built with a React
-                frontend, with a combination of custom and Material-UI
+                accessibility (data available at <a
+                href="https://data.london.gov.uk"
+                >www.data.london.gov.uk</a
+              >). 
+              <br/>
+              The platform was designed and built with a React
+                frontend, using a combination of custom and Material-UI
                 components. Data about boroughs is accessed from a REST API
                 built entirely from scratch.
               </p>
-              <p>
+              <p style="text-align: right;">
                 Click
                 <a href="https://afternoon-hamlet-45174.herokuapp.com/">here</a>
                 to visit TownCrunchr!

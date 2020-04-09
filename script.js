@@ -1,7 +1,5 @@
 window.onload = () => {
-
   if (window.innerWidth > 600) {
-
     setInterval(() => {
       animateCircles();
     }, 1000);
@@ -34,18 +32,38 @@ window.onload = () => {
 
     var controller = new ScrollMagic.Controller();
     var slides = new TimelineMax()
-
       .to('#slideContainer', 0.5, { z: -150 })
       .to('#slideContainer', 1, { x: '-25%' })
+      .to('#slideContainer', 0.5, { z: 0 })
+      .to('#slideContainer', 0.5, { z: -150 })
+      .to('#slideContainer', 1, { x: '-50%' })
       .to('#slideContainer', 0.5, { z: 0 });
 
     var scene = new ScrollMagic.Scene({
       triggerElement: '#portfolio',
       triggerHook: 'onLeave',
-      duration: '400%'
+      duration: '400%',
     })
       .setPin('#portfolio')
       .setTween(slides)
+      .addTo(controller);
+    
+     var scene1 = new ScrollMagic.Scene({
+        triggerElement: "#trigger1",
+        triggerHook: 0.5, // show, when scrolled 10% into view
+        reverse: false,
+        offset: 50 // move trigger to center of element
+      })
+      .setClassToggle("#about", "visible") // add class to reveal
+      .addTo(controller);
+
+     var scene1 = new ScrollMagic.Scene({
+        triggerElement: "#trigger2",
+        triggerHook: 0.4, // show, when scrolled 10% into view
+        reverse: false,
+        offset: 50 // move trigger to center of element
+      })
+      .setClassToggle("#portfolio", "visible") // add class to reveal
       .addTo(controller);
   } else {
     return;
