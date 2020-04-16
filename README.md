@@ -1,2 +1,2 @@
-# portfolio
-Pawel's Portfolio Page
+# Pawel's Portfolio Page
+Available at pawelpietruszka.net
